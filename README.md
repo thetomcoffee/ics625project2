@@ -3,7 +3,7 @@
 ## Project 2 [Metro State](https://www.metrostate.edu/) Fall 2023 Class ICS 625 Service Oriented Architecture and Web Services
 
 
-This application allows a person to manage educational courses.  It's run via a SOAP servcie using Spring Boot.  Also, H2 will be used for a database.  
+This application allows a person to manage educational courses.  It's run via a SOAP servcie using [Spring Boot](https://spring.io/projects/spring-boot).  It was created using [NetBeans](https://netbeans.apache.org/).  Also, H2 will be used for a database.  
 
 Using the H2 console, or SOAP service, a person can:  
 
