@@ -28,23 +28,17 @@ A course consists of the following information:
 
 Sample Course Data:
 
-`<course>
-
-  <id>212</id>
-
-  <number>ICS 141</number>
-
-  <title>Introduction to Programming</title>
-
-  <description>
-
-     Students will learn basic programming and problem solving.
-
-  </description>
-
-  <offered>true</offered>
-
-</course>`
+```xml
+	<course>
+	  <id>212</id>
+	  <number>ICS 141</number>
+	  <title>Introduction to Programming</title>
+	  <description>
+		 Students will learn basic programming and problem solving.
+	  </description>
+	  <offered>true</offered>
+	</course>
+```
 
 ## Security  
 
