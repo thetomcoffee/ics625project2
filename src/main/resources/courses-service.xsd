@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://metrostate.edu/ics625"
+           xmlns:tns="http://metrostate.edu/ics625"
+           elementFormDefault="qualified">
+    
+
+    
+    <xs:simpleType name="actionStatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SUCCESS"/>
+            <xs:enumeration value="FAILED"/>
+        </xs:restriction>
+    </xs:simpleType>
+   
+    
+    <xs:complexType name="courseType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" />
+            <xs:element name="number" type="xs:string" />
+            <xs:element name="title" type="xs:string" />
+            <xs:element name="offered" type="xs:boolean" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="coursesListType">
+        <xs:sequence>
+            <xs:element name="courses" type="tns:courseType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="getCourseRequest">
+        <xs:complexType>
+            <xs:sequence />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCourseResponse">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:element name="course" type="tns:courseType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+
+    
+    <xs:element name="addCourseRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:string" />
+                <xs:element name="title" type="xs:string" />
+                <xs:element name="offered" type="xs:boolean" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="addCourseResponse">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="tns:actionStatusType" />
+            </xs:simpleContent>
+        </xs:complexType>       
+    </xs:element>  
+
+</xs:schema>
